@@ -18,7 +18,7 @@ const Leftbar = () => {
 
             <Link tabIndex={0} className="bg-gray-400  border-b-2 border-black font-semibold p-2 rounded ">All categories-{categories.length} </Link>
 
-            <div className="dropdown-content menu bg-base-200 rounded-box  w-52 p-2  gap-1 shadow-2xl">
+            <div className="dropdown-content menu bg-base-300 rounded-box  w-52 p-2  gap-1 shadow-2xl">
                 {categories.map((category) => <NavLink to={`/category/${String(category.id).padStart(2,'0')}`} key={category.id} className="btn bg-base-400 w-fLink l shadow-2xl "> {category.name} </NavLink >)}
 
             </div >

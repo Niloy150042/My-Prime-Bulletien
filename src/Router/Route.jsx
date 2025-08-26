@@ -1,12 +1,13 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import HomeLayout from "../layouts/HomeLayout";
 import CategoryPages from "../components/CategoryPages";
+import Errorpage from "../Error/Errorpage";
 
 
 const Route = createBrowserRouter([{
     path: '/',
     element: <HomeLayout></HomeLayout>,
-    errorElement: <p> you put the mistake route</p>,
+    errorElement: <Errorpage></Errorpage>,
     children: [{
         path: '/',
         element: <Navigate to='/category/01'></Navigate>
