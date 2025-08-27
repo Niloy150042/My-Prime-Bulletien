@@ -11,7 +11,7 @@ import Register from "../layouts/Register";
 const Route = createBrowserRouter([{
     path: '/',
     element: <HomeLayout></HomeLayout>,
-    // errorElement: <Errorpage></Errorpage>,
+    errorElement: <Errorpage></Errorpage>,
     children: [{
         path: '/',
         element: <Navigate to='/category/01'></Navigate>

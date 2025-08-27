@@ -1,5 +1,4 @@
 import { Outlet } from "react-router-dom";
-import CategoryPages from "../components/CategoryPages";
 import Header from "../components/Header";
 import LatestNews from "../components/LatestNews";
 import Navbar from "../components/Navbar";
