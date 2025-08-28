@@ -5,10 +5,11 @@ import Errorpage from "../Error/Errorpage";
 import AuthLayout from "../layouts/AuthLayout";
 import Login from "../layouts/Login";
 import Register from "../layouts/Register";
+import SingleNews from '../components/SignleNews'
 
 
 
-const Route = createBrowserRouter([{
+const router = createBrowserRouter([{
     path: '/',
     element: <HomeLayout></HomeLayout>,
     errorElement: <Errorpage></Errorpage>,
@@ -24,8 +25,9 @@ const Route = createBrowserRouter([{
     }]
 },
 {
-    path: '/news',
-    element: <p>this is news</p>
+    path: '/news/:id',
+    element:<SingleNews></SingleNews>,
+    loader: ({params})=>fetch(`https://openapi.programming-hero.com/api/news/${params.id}`),
 },
 {
     path: '/auth',
@@ -36,10 +38,10 @@ const Route = createBrowserRouter([{
     },
     {
         path: '/auth/register',
-        element: <Register/>
+        element: <Register />
 
     }]
 }
 ])
 
-export default Route;
+export default router;

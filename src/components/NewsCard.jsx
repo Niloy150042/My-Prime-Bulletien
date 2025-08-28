@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const NewsCard = ({ news }) => {
     const [loading, setLoading] = useState(true)
@@ -53,11 +54,11 @@ const NewsCard = ({ news }) => {
             </p>
 
             {/* Read More */}
-            <div className="px-4 py-2">
-                <button className="text-orange-500 font-semibold hover:underline">
+            <Link to={`/news/${news._id}`} className="px-4 py-2">
+                <button className=" font-semibold hover:underline btn bg-gray-200 text-black">
                     Read More
                 </button>
-            </div>
+            </Link >
 
             {/* Rating and Views */}
             <div className="flex justify-between items-center px-4 py-2 border-t mt-2">
